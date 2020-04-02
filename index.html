@@ -43,11 +43,6 @@
   };
 </script>
 
-  
-  
-    <script src="/js/cursor/cursor-effects.js"></script>
-  
-
   <title>小鑫lay</title>
   
 
@@ -79,8 +74,8 @@
   </style>
 </noscript>
 
+ 
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
@@ -121,9 +116,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
   </ul>
@@ -153,10 +158,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myself.jpg">
       <meta itemprop="name" content="小鑫">
       <meta itemprop="description" content="随笔">
     </span>
@@ -167,7 +172,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">Docker部署应用指南</a>
+            <a href="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">docker部署应用指南</a>
         </h2>
 
         <div class="post-meta">
@@ -178,7 +183,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-02 15:45:03 / 修改时间：16:18:49" itemprop="dateCreated datePublished" datetime="2020-04-02T15:45:03+08:00">2020-04-02</time>
+              <time title="创建时间：2020-04-02 22:43:19 / 修改时间：23:01:03" itemprop="dateCreated datePublished" datetime="2020-04-02T22:43:19+08:00">2020-04-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
+                </span>
             </span>
 
           <br>
@@ -208,13 +222,11 @@
       
           <h2 id="一、Docker的安装"><a href="#一、Docker的安装" class="headerlink" title="一、Docker的安装"></a>一、Docker的安装</h2><p>Docker的安装在不通操作系统下有不同的安装方式</p>
 <h3 id="1-win7、win8安装docker"><a href="#1-win7、win8安装docker" class="headerlink" title="1.win7、win8安装docker"></a>1.win7、win8安装docker</h3><p>win7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载下载地址：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/</a>  (没有安装git的则需勾选Git for Windows)</p>
-<p><img src="C:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140239709.png" alt="image-20200313140239709"></p>
+<p><img src="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/1.png" alt></p>
 <p>安装完成后桌面会有这三个程序</p>
-<p><img src="C:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140436014.png" alt="image-20200313140436014"></p>
-<p>点击 Docker QuickStart 图标来启动 Docker Toolbox 终端，如果docker安装成功则会出现下图</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/#more" rel="contents">
+              <a class="btn" href="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -241,7 +253,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/31/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myself.jpg">
       <meta itemprop="name" content="小鑫">
       <meta itemprop="description" content="随笔">
     </span>
@@ -376,17 +388,30 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鑫"
+      src="/images/myself.jpg">
   <p class="site-author-name" itemprop="name">小鑫</p>
   <div class="site-description" itemprop="description">随笔</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -456,6 +481,7 @@
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -493,5 +519,10 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":250,"height":350},"mobile":{"show":true},"log":false});</script></body>
 </html>
+
+  
+    <script src="/js/cursor/cursor-effects.js"></script>
+  
+

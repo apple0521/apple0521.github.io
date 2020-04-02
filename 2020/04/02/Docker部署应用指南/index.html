@@ -22,22 +22,23 @@
 
   <meta name="description" content="一、Docker的安装Docker的安装在不通操作系统下有不同的安装方式 1.win7、win8安装dockerwin7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载下载地址：http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-toolbox&#x2F;windows&#x2F;docker-toolbox&#x2F;  (没有安装git的则需勾选Git for Wi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker部署应用指南">
-<meta property="og:url" content="http://yoursite.com/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:title" content="docker部署应用指南">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="小鑫lay">
 <meta property="og:description" content="一、Docker的安装Docker的安装在不通操作系统下有不同的安装方式 1.win7、win8安装dockerwin7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载下载地址：http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-toolbox&#x2F;windows&#x2F;docker-toolbox&#x2F;  (没有安装git的则需勾选Git for Wi">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140239709.png">
-<meta property="og:image" content="c:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140436014.png">
-<meta property="og:image" content="https://images2018.cnblogs.com/blog/691999/201805/691999-20180512144040035-1820444602.png">
-<meta property="og:image" content="c:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313142208712.png">
-<meta property="article:published_time" content="2020-04-02T07:45:03.393Z">
-<meta property="article:modified_time" content="2020-04-02T08:18:49.916Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/4.png">
+<meta property="article:published_time" content="2020-04-02T14:43:19.000Z">
+<meta property="article:modified_time" content="2020-04-02T15:01:03.670Z">
 <meta property="article:author" content="小鑫">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140239709.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
+<link rel="canonical" href="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
 
 
 <script id="page-configurations">
@@ -50,12 +51,7 @@
   };
 </script>
 
-  
-  
-    <script src="/js/cursor/cursor-effects.js"></script>
-  
-
-  <title>Docker部署应用指南 | 小鑫lay</title>
+  <title>docker部署应用指南 | 小鑫lay</title>
   
 
 
@@ -86,8 +82,8 @@
   </style>
 </noscript>
 
+ 
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
@@ -128,9 +124,19 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
   </ul>
@@ -161,10 +167,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/Docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myself.jpg">
       <meta itemprop="name" content="小鑫">
       <meta itemprop="description" content="随笔">
     </span>
@@ -174,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Docker部署应用指南
+          docker部署应用指南
         </h1>
 
         <div class="post-meta">
@@ -185,7 +191,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-02 15:45:03 / 修改时间：16:18:49" itemprop="dateCreated datePublished" datetime="2020-04-02T15:45:03+08:00">2020-04-02</time>
+              <time title="创建时间：2020-04-02 22:43:19 / 修改时间：23:01:03" itemprop="dateCreated datePublished" datetime="2020-04-02T22:43:19+08:00">2020-04-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
+                </span>
             </span>
 
           
@@ -222,13 +237,12 @@
       
         <h2 id="一、Docker的安装"><a href="#一、Docker的安装" class="headerlink" title="一、Docker的安装"></a>一、Docker的安装</h2><p>Docker的安装在不通操作系统下有不同的安装方式</p>
 <h3 id="1-win7、win8安装docker"><a href="#1-win7、win8安装docker" class="headerlink" title="1.win7、win8安装docker"></a>1.win7、win8安装docker</h3><p>win7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载下载地址：<a href="http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/" target="_blank" rel="noopener">http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/</a>  (没有安装git的则需勾选Git for Windows)</p>
-<p><img src="C:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140239709.png" alt="image-20200313140239709"></p>
+<p><img src="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/1.png" alt></p>
 <p>安装完成后桌面会有这三个程序</p>
-<p><img src="C:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313140436014.png" alt="image-20200313140436014"></p>
-<p>点击 Docker QuickStart 图标来启动 Docker Toolbox 终端，如果docker安装成功则会出现下图</p>
 <a id="more"></a>
-
-<p><img src="https://images2018.cnblogs.com/blog/691999/201805/691999-20180512144040035-1820444602.png" alt="img"></p>
+<p><img src="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/2.png" alt></p>
+<p>点击 Docker QuickStart 图标来启动 Docker Toolbox 终端，如果docker安装成功则会出现下图</p>
+<p><img src="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/3.jpg" alt></p>
 <p>（其中 【192.168.99.100】是VirtualBox中名字为【default】虚拟机的ip地址。）</p>
 <h3 id="2-win10安装docker"><a href="#2-win10安装docker" class="headerlink" title="2.win10安装docker"></a>2.win10安装docker</h3><p>Docker for Windows分为企业版&gt;教育版&gt;专业版&gt;家庭版。（家庭版的不能开启Hyper-V，所以最低要专业版）</p>
 <p>如果系统不符合运行Docker for Windows的要求，则可以安装Docker Toolbox，Dockbox Toolbox使用Oracle Virtual Box而不是Hyper-V。</p>
@@ -238,7 +252,7 @@
 
 <p>这样就可以下载安装包了，在docker官网下载Docker for Windows  <a href="https://www.docker.com/get-started" target="_blank" rel="noopener">https://www.docker.com/get-started</a></p>
 <p>下载完进行安装启动，右下角会有小图标出现显示Docker Desktop is running  就说明docker启动好了。</p>
-<p><img src="C:%5CUsers%5C51966%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200313142208712.png" alt="image-20200313142208712"></p>
+<p><img src="/2020/04/02/docker%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E6%8C%87%E5%8D%97/4.png" alt></p>
 <h3 id="3-linux下安装docker"><a href="#3-linux下安装docker" class="headerlink" title="3.linux下安装docker"></a>3.linux下安装docker</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 安装依赖包</span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2 </span><br><span class="line"></span><br><span class="line">* 设置阿里云镜像源</span><br><span class="line">yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo </span><br><span class="line"></span><br><span class="line">* 安装 Docker-CE</span><br><span class="line">yum install docker-ce</span><br><span class="line"></span><br><span class="line">* 启动 Docker-CE</span><br><span class="line">systemctl enable docker</span><br><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
 
 <h2 id="二、制作docker镜像"><a href="#二、制作docker镜像" class="headerlink" title="二、制作docker镜像"></a>二、制作docker镜像</h2><h3 id="1-通过dockerfile在本地制作镜像"><a href="#1-通过dockerfile在本地制作镜像" class="headerlink" title="1.通过dockerfile在本地制作镜像"></a>1.通过dockerfile在本地制作镜像</h3><p>  创建一个文件夹，里面放入打包好的war或者jar包，还需放入docekrfile文件，然后通过docker bulid命令来制作镜像</p>
@@ -267,6 +281,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># docker</a>
+          </div>
 
         
 
@@ -342,17 +359,30 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小鑫"
+      src="/images/myself.jpg">
   <p class="site-author-name" itemprop="name">小鑫</p>
   <div class="site-description" itemprop="description">随笔</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/archives">
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -422,6 +452,7 @@
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -459,5 +490,10 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":250,"height":350},"mobile":{"show":true},"log":false});</script></body>
 </html>
+
+  
+    <script src="/js/cursor/cursor-effects.js"></script>
+  
+
